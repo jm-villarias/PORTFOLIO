@@ -1,0 +1,368 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 1.875rem;
+  margin: 5rem;
+  align-items: start;
+
+}
+
+.about-image {
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  justify-self: center;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.about-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(40, 57, 80, 0.1), rgba(166, 170, 183, 0.1));
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-image:hover::before {
+  opacity: 1;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.about-image:hover img {
+  transform: scale(1.05);
+}
+
+.introduction h1 {
+  color: #000000;
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: "Chonburi", serif;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  padding: 2.5rem;
+  display: block;
+  margin: 0px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-text {
+  padding: 1.25rem 0;
+  text-align: center;
+  margin-top: 0px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+}
+
+.about-text h2 {
+  font-family: "Chonburi", serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.tagline {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1.875rem;
+  font-weight: 500;
+}
+
+.bio {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  color: #000000;
+}
+
+.about-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  margin-bottom: 2.5rem;
+}
+
+.detail-item h3 {
+  font-family: "Chonburi", serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.625rem;
+  color: #000;
+}
+
+.detail-item p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+.about-cta {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cta-button {
+  background: #020202;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-family: "Chonburi", serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: #a6aab7;
+}
+
+.cta-button.secondary {
+  background: transparent;
+  color: #020202;
+  border: 2px solid #020202;
+}
+
+.cta-button.secondary:hover {
+  background: #020202;
+  color: #fff;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  margin-top: 50px;
+  transform: translateY(-50%);
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  background: #999494;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100vh;
+  background: rgba(70, 54, 54, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px 20px 20px;
+  z-index: 1200;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  text-align: center;
+}
+.mobile-nav.open {
+  display: flex;
+  transform: translateX(0);
+}
+.mobile-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 18px 0;
+  font-family: "Chonburi", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-content {
+    margin: 3.75rem;
+    gap: 2.5rem;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+  .introduction h1 {
+    font-size: 4.5rem;
+    letter-spacing: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .nav-bar {
+    margin: 1.25rem auto 0 auto;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    margin: 2.5rem;
+    gap: 2.5rem;
+  }
+  
+  .about-image {
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+  
+  .about-text h2 {
+    font-size: 2rem;
+  }
+  
+  .bio {
+    font-size: 1rem;
+  }
+  
+  .about-cta {
+    justify-content: center;
+  }
+  .nav-bar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-bar a {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    margin: 1.25rem;
+    gap: 1.875rem;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .tagline {
+    font-size: 1rem;
+  }
+  
+  .bio {
+    font-size: 0.9rem;
+  }
+  
+  .detail-item h3 {
+    font-size: 1.3rem;
+  }
+  
+  .detail-item p {
+    font-size: 0.9rem;
+  }
+  
+  .about-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-button {
+    width: 100%;
+    max-width: 200px;
+    text-align: center;
+  }
+  .nav-bar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-bar a {
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    width: 2.8125rem;
+    height: 2.1875rem;
+  }
+} 
+
+/* Move these to the end for highest specificity */
+@media (max-width: 1024px) {
+  .introduction > h1, .introduction h1 {
+    font-size: 4.5rem !important;
+    letter-spacing: 1.5rem !important;
+    padding: 1.5rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .introduction > h1, .introduction h1 {
+    font-size: 2.5rem !important;
+    letter-spacing: 0.5rem !important;
+    padding: 1rem !important;
+  }
+}
+@media (max-width: 480px) {
+  .introduction > h1, .introduction h1 {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2rem !important;
+    padding: 0.5rem !important;
+  }
+} 

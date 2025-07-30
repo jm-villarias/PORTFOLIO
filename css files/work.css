@@ -1,0 +1,350 @@
+.work-content {
+  margin: 5rem;
+}
+
+.introduction h1 {
+  color: #000000;
+  text-decoration: none;
+  font-size: 4rem;
+  font-family: "Chonburi", serif;
+  letter-spacing: 2.5rem;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  /* From https://css.glass */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  padding: 2.5rem;
+  display: block;
+  margin: 0px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.work-intro {
+  text-align: center;
+  margin-bottom: 3.75rem;
+}
+
+.work-intro h2 {
+  font-family: "Chonburi", serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.work-intro p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #000000;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.875rem, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.project-info {
+  padding: 1.5rem;
+}
+
+.project-info h3 {
+  font-family: "Chonburi", serif;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.project-info p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+  
+}
+
+.tech-tag {
+  background: #020202;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.project-link {
+  color: #000000;
+  text-decoration: none;
+  border: 1px solid #020202;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-family: "Chonburi", serif;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.project-link:hover {
+  background: #a6aab7;
+}
+
+.work-cta {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3.75rem 2.5rem;
+}
+
+.work-cta h3 {
+  font-family: "Chonburi", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.work-cta p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.875rem;
+  color: #000000;
+}
+
+.cta-button {
+  background: #020202;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 14px;
+  font-family: "Chonburi", serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 1px;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background: #a6aab7;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  margin-top: 50px;
+  transform: translateY(-50%);
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  background: #999494;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px 20px 20px;
+  z-index: 1200;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  text-align: center;
+}
+.mobile-nav.open {
+  display: flex;
+  transform: translateX(0);
+}
+.mobile-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 18px 0;
+  font-family: "Chonburi", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .work-content {
+    margin: 3.75rem;
+  }
+  
+  .introduction > h1, .introduction h1 {
+    font-size: 4.5rem !important;
+    letter-spacing: 1.5rem !important;
+    padding: 1.5rem !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    gap: 1.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .work-content {
+    margin: 2.5rem;
+  }
+  
+  .introduction > h1, .introduction h1 {
+    font-size: 2.5rem !important;
+    letter-spacing: 0.5rem !important;
+    padding: 1rem !important;
+  }
+  
+  .work-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .work-intro p {
+    font-size: 1rem;
+  }
+  
+  .projects-grid {
+    gap: 1.875rem;
+  }
+  
+  .project-info {
+    padding: 1.25rem;
+  }
+  
+  .work-cta {
+    padding: 2.5rem 1.25rem;
+  }
+  
+  .work-cta h3 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-content {
+    margin: 1.25rem;
+  }
+  
+  .introduction > h1, .introduction h1 {
+    font-size: 1.5rem !important;
+    letter-spacing: 0.2rem !important;
+    padding: 0.5rem !important;
+  }
+  
+  .work-intro h2 {
+    font-size: 1.8rem;
+  }
+  
+  .work-intro p {
+    font-size: 0.9rem;
+  }
+  
+  .project-info h3 {
+    font-size: 1.3rem;
+  }
+  
+  .project-info p {
+    font-size: 0.9rem;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-link {
+    text-align: center;
+  }
+  
+  .work-cta h3 {
+    font-size: 1.3rem;
+  }
+  
+  .work-cta p {
+    font-size: 1rem;
+  }
+} 
+
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+@media (max-width: 480px) {
+  .nav-bar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+} 

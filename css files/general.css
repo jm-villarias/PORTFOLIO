@@ -1,0 +1,40 @@
+
+
+
+body {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: "Poppins", sans-serif;
+  background: #ffffffdb;
+  overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Typing Effect Styles */
+.greeting {
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* Responsive Design for General Elements */
+@media (max-width: 768px) {
+  header {
+    margin: 0.3125rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    margin: 0.1875rem;
+  }
+}

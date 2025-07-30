@@ -1,0 +1,299 @@
+header {
+  display: flex;
+  justify-content: center;
+
+}
+
+
+
+.logo {
+  width: 55px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 20px;
+
+}
+
+
+.nav-bar {
+  display: flex;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: "Chonburi", serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  padding: 5px;
+  margin: 20px auto;
+  margin-right: 500px;
+ 
+
+  }
+
+.nav-bar a {
+  margin: 0 15px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.who {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 6.25rem;
+  
+}
+
+.who-image {
+  width: 345.5px;
+  display: grid;
+  overflow: hidden;
+  border-radius: 20px;
+  max-width: 21.6rem;
+  margin-left: 100px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.who-image:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.who-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(40, 57, 80, 0.1), rgba(166, 170, 183, 0.1));
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.who-image:hover::before {
+  opacity: 1;
+}
+
+.who-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease;
+  z-index: 0;
+}
+
+.who-image:hover img {
+  transform: scale(1.05);
+}
+
+.who-intro {
+  padding: 1.25rem;
+}
+
+.who-intro h2 {
+  font-family: "Chonburi", serif;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  color: #432b2b;
+}
+
+.who-intro p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.875rem;
+  color: #000000;
+}
+
+.who-intro button {
+  background: #283950;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  font-family: "Chonburi", serif;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-right: 0.9375rem;
+  margin-bottom: 0.625rem;
+  letter-spacing: 1px;
+}
+
+.who-intro button:hover {
+  background: #a6aab7;
+}
+
+footer {
+  margin: 0px;
+}
+
+.me p {
+  font-size: 10px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  margin-top: 50px;
+  transform: translateY(-50%);
+  z-index: 1100;
+}
+.hamburger span {
+  display: block;
+  width: 5px;
+  height: 5px;
+  margin: 0 2px;
+  background: #999494;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 220px;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 60px 20px 20px 20px;
+  z-index: 1200;
+  transition: transform 0.3s ease;
+  transform: translateX(100%);
+  
+}
+.mobile-nav.open {
+  display: flex;
+  transform: translateX(0);
+}
+.mobile-nav a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 18px 0;
+  font-family: "Chonburi", serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .greeting {
+    font-size: 4.5rem;
+    letter-spacing: 1.5rem;
+    margin: 2.5rem 1rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .who {
+    margin: 5rem;
+  }
+  
+  .nav-bar {
+    margin: 1.25rem auto 0 auto;
+    padding: 0.5rem 1rem;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .greeting {
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    margin: 1.5rem 0.5rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .who {
+    grid-template-columns: 1fr;
+    margin: 3.75rem 2.5rem;
+    gap: 2.5rem;
+  }
+  
+  .who-image {
+    width: 100%;
+    max-width: 25rem;
+    margin: 0 auto;
+  }
+  
+  .nav-bar {
+    display: none !important;
+  
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-bar a {
+    margin: 0.25rem 0;
+    font-size: 3.9rem;
+   
+  }
+}
+
+@media (max-width: 480px) {
+  .greeting {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin: 1rem 0.25rem;
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .who {
+    margin: 2.5rem 1.25rem;
+  }
+  
+  .who-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .who-intro p {
+    font-size: 1rem;
+  }
+  
+  .nav-bar {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-bar a {
+    margin: 0.15rem 0;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    width: 2.8125rem;
+    height: 2.1875rem;
+  }
+}
+
